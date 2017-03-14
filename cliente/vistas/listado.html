@@ -1,0 +1,31 @@
+<form ng-submit="registrar()">
+    <div class="form-group">
+        <label> Empleado de Estocolmo 1000 - 1999</label>
+        <input type="text" class="form-control" placeholder="Empleado de Estocolmo" ng-model="estocolmo" ng-required="true">
+    </div>
+    <div class="form-group">
+        <label> Empleado de Londres 2000 - 2999</label>
+        <input type="text" class="form-control" placeholder="Empleado de londres" ng-model="londres" ng-required="true">
+    </div>
+    <button type="submit" class="btn btn-default btn-block">Agregar</button>
+</form>
+<hr />
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Listado de empleados asignados para la reunion 
+  </div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Persona</th>
+            <th>Conteo</th>
+            <th>Grupos</th>
+        </tr>
+        <tr ng-repeat="m in model">
+            <td>{{m.persona}}</td>
+            <td>{{m.conteo}}</td>
+            <td>{{m.grupos}}</td>
+            </td>
+        </tr>
+    </table>
+</div>
